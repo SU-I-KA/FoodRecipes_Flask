@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: "PT Sans", sans-serif;*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    margin: 0;
+    color: #262626;
+    color: rgba(var(--i1d,38,38,38),1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color:#fafafa;
+}
+  
+.container {
+    max-width: 1140px;
+    margin: auto;
+    /*font-family: 'Poppins', sans-serif;*/
+    /*background-color: #fff;*/
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login, .signup {
+    display: flex;
+    background-color: #fff;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 41px 40px;
+    margin-top: 15px;
+    border:#dbdbdb 1px solid;
+    border-radius: 1px;
+}
+
+.login .logo {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 25px auto 50px;
+
+}
+
+form .form-control {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: block;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    border-radius: 3px;
+    height: 36px;
+    padding: 6px;
+    margin-top: 7px;
+    width: 268px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+form .form-control::placeholder {
+    color: #8e8e8e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    
+}
+
+.form-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: center;
+    display: block;
+    margin-top: 15px;
+}
+
+.btn {
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid transparent;
+    /*background-color: #0095f6;*/
+    border-radius: 3px;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(var(--d69,0,149,246),.3);
+    opacity: 1;
+}
+
+.login .forget {
+    display: inline-block;
+    flex: 0 0 100%;
+    padding-top: 12px;
+}
+
+.forget a {
+    color: #00376b;
+    color: rgba(var(--fe0,0,55,107),1);
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.center {
+    justify-content: center;
+}
+
+.question {
+    color: rgba(var(--i1d,38,38,38),1);
+    font-size: 14px;
+    margin: 12px;
+    text-align: center;
+}
+
+.signup {
+    padding: 10px 0;
+}
+
+.signup a {
+    text-decoration: none;
+    color: rgba(var(--d69,0,149,246),1);
+    font-weight: 600;
+    font-size: 14px;
+}
+/*------------------------------------  END LOGIN  --------------------------------------*/
+
+/*------------------------------------  START SIGNUP  -----------------------------------*/
+
+
+.login .terms {
+    display: inline-block;
+    flex: 0 0 100%;
+    padding-top: 12px;
+    justify-content: center;
+}
+
+.terms p {
+    color: #8e8e8e;
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 12px;
+    text-align: center;
+    max-width: 268px;
+}
+  
+
+/*------------------------------------  END SIGNUP  -------------------------------------*/
+
+/*------------------------------------  START SLIDER  -----------------------------------*/
+
+.mySlides {
+    display: none;
+}
+
+.slide-img {
+    vertical-align: middle;
+    max-height: 350px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+    position: absolute;
+    bottom: 12px;
+    right: 50%;
+    margin-right: -39px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(var(225,225,225),.3);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: rgba(var(--fe0,0,55,107),1);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  
+}
+
+/*------------------------------------  END SLIDER  -----------------------------------*/
+
+/*------------------------------------  START FOOTER  -----------------------------------*/
+.copyright p {
+    text-align: center;
+    color: #8e8e8e;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.copyright {
+    /*background-color: #0c0c17;
+    border-top: 1px solid #dbdbdb; */
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/*------------------------------------  END FOOTER  -----------------------------------*/

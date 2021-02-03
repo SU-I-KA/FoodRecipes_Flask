@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recipe
+{% endblock %}
+
+{% block main %}
+        <section class="recipe-wrap text-center">
+        {% if userid == row[0]["user_id"] %}
+            <a class="edit-recipe" href="/edit/{{row[0]["id"]}}">EDIT</a>
+        {% endif %}
+        <h1>{{row[0]["title"]}}</h1>
+        <h4>{{row[0]["story"]}}</h4>
+        <p class="forked">Forked by <a href="/myrecipes/{{name_id[0]["user_id"]}}" class="chefname">{{ name[0]["username"] }}</a></p>
+        <hr>
+        <img src="{{row[0]["image"]}}" alt="recipe-img">
+        <div class="small-sect">
+            <h3><span>Cook Time</span><span class="psmall">:</span> {{row[0]["cook_time"]}}</h3>
+            <h3><span class="align">Serving</span><span class="psmall">:</span> {{row[0]["serving"]}} people</h3>
+         </div>
+         <hr><br>
+        <h2>Ingredients</h2>
+        <!-- row[0]["ingredients"] -->
+        <p class="content" >
+            <ul>
+                {% for i in ingre_buffer[1:] %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ul>
+        </p>
+        <hr>
+        <h2>Steps</h2>
+        <p class="content">
+            <ol>
+                {% for step in step_buffer[1:] %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+        </p>
+    </section>
+{% endblock %}

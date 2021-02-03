@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- website icon -->
+        <link href="/static/logoicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <!--
+        <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='upload.js') }}"></script>
+
+
+        <title>MUM'S FOODRECIPES: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light border">
+            <a class="navbar-brand" href="/"><logo alt="LOGO" title="UCOOK" width="170px" height="60px">UCOOK</logo></a>
+            {% if session.user_id %}
+                <div class="dropdown_mine">
+                        <div class="dropdown_mine">
+                            <button class="dropbtn_mine" style="text-transform: capitalize" onclick="myFunction()">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                {{session.username}}
+                            </button>
+                            <div class="dropdown-content_mine" id="my_Dropdown">
+                                <a href="#"><i class="fa fa-user-circle-o move_aside" aria-hidden="true"></i>Profile</a>
+                                <a href="/create"><i class="fa fa-plus-circle move_aside" aria-hidden="true"></i>CREATE</a>
+                                <a href="/myrecipes/{{ session.user_id }}"><i class="fa fa-cutlery move_aside" aria-hidden="true"></i>MY RECIPES</a>
+                                <a href="/settings"><i class="fa fa-cog move_aside" aria-hidden="true"></i>Settings</a>
+                                <a class="border_top" href="/logout">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+            {% else %}
+                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item "><a class="nav-link btn btn-primary" href="/login">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+        </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <div class="container">
+            {% block main %}{% endblock %}
+        </div>
+
+        <footer class="small text-center text-muted">
+            <section class="copyright">
+                <div class="wrapper">
+                    <p>SUIKA &copy; 2020 Copyright. All Rights Reserved</p>
+                </div>
+            </section>
+        </footer>
+
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("my_Dropdown").classList.toggle("show_it");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(e) {
+              if (!e.target.matches('.dropbtn_mine')) {
+              var myDropdown = document.getElementById("my_Dropdown");
+                if (myDropdown.classList.contains('show_it')) {
+                  myDropdown.classList.remove('show_it');
+                }
+              }
+            }
+        </script>
+
+        <script src="/static/application.js"></script>
+        <script src="/static/slider.js"></script>
+        <script src="/static/expanding.js"></script>
+
+    </body>
+
+</html>

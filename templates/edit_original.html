@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit Recipe
+{% endblock %}
+
+{% block main %}
+    <section class="recipe-wrap">
+        <form action="/edit/{{recipes[0]["id"]}}" method="post">
+            <a class="edit-recipe" href="/cancel/{{recipes[0]["id"]}}">CANCEL</a>
+
+            <div class="mb-2">
+              <div>
+                <div class="image">
+                    <div class="bg-highlight">
+                      <div class="py-5 md:py-12 image-upload text-center">
+                        <div class="text-secondary">
+                          <img class="w-16 mx-auto pointer-events-none" src="http://assets-global.cpcdn.com/assets/camera-e526534167ed86f4891b97ae3da7bb6327b7679a0ad7c9b837434847f8457434.png">
+
+                          <p class="text-cookpad-20 font-extrabold mt-6">Upload recipe photo</p>
+
+                          <p class="text-cookpad-14">Inspire others to cook your dish</p>
+                        </div>
+
+                        <input type="file" name="file" onchange="readURL(this);" aria-label="Upload recipe photo" accept="image/*">
+                        <div class="row">
+                            <img id="blah" src="" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <input class="form-control" name="title" placeholder="Title: Grandma's dumplings" type="text" value="{{recipes[0]["title"]}}">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="story" placeholder="Grandma's Apple Pie" type="text" value="{{recipes[0]["story"]}}">
+            </div>
+
+            <div class="form-group">
+                <h3><span>Cook Time: </span><input class="form-control" name="cooking-time" placeholder="1hr 30 mins" type="text" value="{{recipes[0]["cook_time"]}}"></h3>
+            </div>
+            <div class="form-group">
+                <h3><span>Serving: </span><input class="form-control" name="serving" placeholder="Serves: 2 People" type="text" value="{{recipes[0]["serving"]}}"></h3>
+            </div>
+            <br>
+            <div class="form-group">
+                <h2>Ingredients</h2>
+                <div class="expanding-wrapper" style="position:relative">
+                    <textarea class="form-control expanding" data-paste-format="ul" name="ingredients" placeholder="- 5 Granny Smith Apples" >
+                        {{recipes[0]["ingredients"]}}
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Steps</h2>
+                <div class="expanding-wrapper" style="position:relative">
+                    <textarea class="form-control expanding" data-paste-format="ol" name="steps" id="recipe_directions" placeholder="1. Mix all ingredients">
+                        {{recipes[0]["steps"]}}
+                    </textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Home
+{% endblock %}
+
+{% block main %}
+    <div class="row center">
+        <div class="header">
+            <h2>COOKING FUN!</h2>
+            <h2>SHARE YOUR RECIPES WITH US & DISCOVER OTHER'S RECIPES</h2>
+        </div>
+    </div>
+    <div class="row center">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="{{row[4]["image"]}}" class="slide-img" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{{row[5]["image"]}}" class="slide-img" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{{row[6]["image"]}}" class="slide-img" style="width:100%">
+            </div>
+
+            <div class="dots" style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+        </div>
+        <br>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="recipe-gallery">
+            {% for resp in row %}
+
+                <div class="item">
+                    <div class="inner">
+                        <img src="{{resp["image"]}}" alt="recipe-img" >
+                        <div class="overlay">
+                            <a href="/recipes/{{resp["id"]}}"><span class="fa fa-plus"></span></a>
+                            <h4>{{resp["title"]}}</h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+    </div>
+{% endblock %}

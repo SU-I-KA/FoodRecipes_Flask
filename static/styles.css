@@ -1,0 +1,696 @@
+/* ----------------------- start scrollbar ------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/* ----------------------- end scrollbar ------------------------*/
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    padding-top:0px;
+
+}
+
+.form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: 100%;
+}
+
+
+img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+.form-control {
+    transition: none;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+.btn {
+    transition: none;
+    }
+}
+
+.login-form {
+    display: inline-block;
+    text-align: center;
+    background-color:#fff;
+    border:#dbdbdb 1px solid;
+    justify-content: center!important;
+    align-items: center!important;
+    padding: 12px;
+    max-width: 350px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container {
+    margin:auto;
+    padding: 0;
+    max-width: 1140px;
+}
+/* -------------- Footer start ----------- */
+section.copyright {
+    padding: 15px;
+}
+
+/* -----------------footer end ------------ */
+
+
+.navbar-light .navbar-nav .nav-link.register {
+    color: #007bff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 4px 7px;
+}
+
+.forked {
+    font-size: 15px;
+    margin-top: -12px;
+}
+
+
+form {
+
+    text-align: center;
+    justify-content:center;
+    max-width:350px;
+}
+
+body {
+    background-color:#fafafa;
+    justify-content: center;
+}
+
+.bg-light {
+    background-color: #fff!important;
+}
+
+logo {
+    font-size:25px;
+    line-height:25px;
+    padding-top:0;
+    padding-bottom:0;
+}
+
+.navbar{
+    padding: 0 1rem;
+}
+
+.mt-2, .my-2 {
+    margin-top: 0px!important;
+}
+
+.recipe{
+    width:100%;
+}
+
+.recipe-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 25px;
+    position: relative;
+    margin-top: 25px;
+}
+
+.recipe-wrap form{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    display: block;
+    margin-top: 10px;
+}
+.small-sect {
+    display: flex;
+    justify-content: space-between;
+    max-width: 352px;
+    margin: 26px auto 0px;
+}
+
+.recipe-wrap img {
+    width: 100%;
+    max-height: 400px;
+    border: 4px solid #000;
+}
+
+/* --------responsive start */
+@media (max-width: 770px) {
+    .recipe-gallery .item {
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+    }
+}
+@media (max-width: 500px) {
+    .recipe-gallery .item {
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+    }
+}
+
+/* --------responsive end */
+
+span.align {
+    border-left: 1px solid #dbdbdb;
+    padding-left: 16px;
+}
+
+span.psmall {
+    margin-left: 12px;
+    margin-right: 5px;
+}
+
+.recipe-wrap input {
+    margin-top: 9px;
+    box-sizing: border-box;
+    border: 1px solid #DBDDA1;
+}
+
+.recipe-wrap h3 {
+    font-size: 17px;
+    /*border-bottom: 1px solid #dbdbdb;*/
+    font-family: Lato,Helvetica Neue,Helvetica,arial,sans-serif;
+    padding-bottom: 6px;
+}
+
+section.recipe-wrap h4 {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+section.recipe-wrap h1 {
+    font-family: TitanOne;
+    font-weight: bold;
+    color: powderblue;
+}
+
+.recipe-wrap h2 {
+    font-family: Lato,Helvetica Neue,Helvetica,arial,sans-serif;
+    font-weight: 600;
+    text-align: left;
+    font-size: 23px;
+}
+
+a.edit-recipe {
+    color: #dbdbdb;
+    /* text-align: right; */
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+a.edit-recipe:hover {
+    color:lightblue;
+    transition:all 0.5s ease;
+    text-decoration:none;
+}
+/*
+textarea.form-control {
+    margin: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    resize: none;
+    overflow: auto;
+}
+*/
+
+textarea.form-control {
+    margin: 0px;
+    box-sizing: border-box;
+    border: 1px solid #DBDDA1;
+    height: 275px;
+}
+
+/* homepage */
+.inner img{
+    height: 365px;
+}
+
+
+
+.recipe-gallery {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-top: 25px;*/
+    /* justify-content: space-between; */
+}
+.recipe-gallery .item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 8px;
+    /* background-color: #d5d5d5; */
+    position: relative;
+}
+.recipe-gallery .item .inner {
+    position: relative;
+}
+.recipe-gallery .item img {
+    width: 100%;
+    display: block;
+}
+.recipe-gallery .item .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.recipe-gallery .item .overlay .fa {
+    height: 50px;
+    width: 50px;
+    background-color: #febd01;
+    /* color: #fff; */
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.recipe-gallery .item .overlay .fa:hover {
+    color:#ffffff;
+    transition: all 0.5s ease;
+}
+
+.recipe-gallery .item:hover .overlay {
+  opacity: 1;
+}
+
+.recipe-gallery .item .overlay h4 {
+  margin: 15px 25px 0px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.recipe-gallery .item:hover .overlay h4 {
+  animation: galleryText 0.8s ease;
+  -webkit-animation: galleryText 0.8s ease;
+}
+
+.recipe-gallery .item:hover .overlay .fa {
+  animation: galleryIcon 0.8s ease;
+  -webkit-animation: galleryIcon 0.8s ease;
+}
+
+
+@keyframes galleryText {
+  0% {
+    transform: translateY(20px); opacity: 0;
+  }
+  100% {
+    transform: translateY(0); opacity: 1;
+  }
+}
+
+@keyframes galleryIcon {
+  0% {
+    transform: translateY(-20px); opacity: 0;
+  }
+  100% {
+    transform: translateY(0); opacity: 1;
+  }
+}
+
+/*   create page   */
+
+.recipe {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 680px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 25px;
+    position: relative;
+    margin-top: 50px;
+}
+.mb-2 {
+    margin-bottom: .5rem;
+}
+.image {
+    position: relative;
+    min-height: 40px;
+}
+.bg-highlight {
+    background-color: #f6f5f4;
+    border-radius: 12px;
+    border: 1px solid #dbdbdb;
+    height: 251px;
+}
+
+.bg-highlight .row {
+    justify-content:center;
+}
+
+.image-upload {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px)
+.md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.text-center {
+    text-align: center;
+}
+.py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.text-secondary {
+    color: #797776;
+}
+.w-16 {
+    width: 4rem;
+}
+.pointer-events-none {
+    pointer-events: none;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-cookpad-20 {
+    font-size: 1.25rem;
+}
+.mt-6 {
+    margin-top: 1.5rem;
+}
+.font-extrabold {
+    font-weight: 800;
+}
+.image-upload p, pre {
+    margin: 0;
+}
+.text-cookpad-14 {
+    font-size: .875rem;
+}
+.image-upload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate(-300px) scale(4);
+    font-size: 530px;
+    direction: ltr;
+    cursor: pointer;
+    height: 100%;
+}
+input[type=file] {
+    display: block;
+}
+
+
+label.fakes {
+    display: inline-flex;
+    margin-top: 0.2rem;
+    /* left: 0px; */
+    padding-left: 10px;
+    position: relative;
+}
+.fakes {
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    /* padding-right: 89px; */
+}
+
+.recipe .row {
+    margin-left:0;
+    margin-right:0;
+    margin-bottom: 1rem;
+}
+.fork {
+    display: flex;
+}
+.row {
+    margin:0;
+}
+.btn-style {
+    background-color: #f6f5f4;
+    color: #797776;
+    font-weight: 700;
+    border: 1px solid #dbdbdb;
+    padding: 7px 31px;
+}
+
+.btn-style:hover {
+    background-color: #797776;
+    color: #f6f5f4;
+    font-weight: 700;
+    border: 1px solid #dbdbdb;
+    padding: 7px 31px;
+    transition: all 0.5s ease;
+}
+
+.overlay a {
+    color:saddlebrown;
+}
+
+img#blah {
+    display: block;
+    width: 570px;
+    max-height: 249px;
+    position: absolute;
+    top: 0;
+    border-radius: 12px;
+}
+
+.pb-5, .py-5 {
+    padding-bottom: 6rem!important;
+}
+
+li {
+    text-align: justify;
+}
+
+
+/*------------------------------------  START SLIDER  -----------------------------------*/
+
+.mySlides {
+    display: none;
+}
+
+.slide-img {
+    vertical-align: middle;
+    max-height: 350px;
+    border-radius: 5px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  border: 1px solid #ffffff;
+  margin-bottom: 35px;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+    position: absolute;
+    bottom: 12px;
+    right: 50%;
+    margin-right: -39px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(var(225,225,225),.3);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active {
+  background-color: rgba(var(--fe0,0,55,107),1);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}
+.fade:not(.show) {
+    opacity: 1;
+}
+
+/*------------------------------------  END SLIDER  -----------------------------------*/
+
+.center {
+    justify-content: center;
+}
+
+.setting {
+    margin-top: 50px;
+}
+
+/* --------------------- start dropdown ------------------------- */
+.dropdown_mine {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown_mine .dropbtn_mine {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #000000;
+  line-height: 37px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content_mine {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 12;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+  margin-top: 10px;
+  right: 12px
+}
+
+.dropdown-content_mine a {
+  float: none;
+  color: black;
+  padding: 5px 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content_mine a:hover {
+  background-color: #ddd;
+}
+
+.show_it {
+  display: block;
+}
+
+.border_top {
+    border-top: 1px solid #dbdbdb;
+}
+
+/* -------------------------------- dropdown end -------------------------  */
+
+.header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header h2 {
+    font-family: monospace;
+}
+
+/* ------------ trial ------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 50;
+}
+
+.move_aside {
+    margin-right: 8px;
+}
+
+a.hommy {
+    font-size: 20px;
+    color: #000;
+}
+.home_page {
+    float: left;
+    line-height: 37px;
+    margin-right: 15px;
+}

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Recipe
+{% endblock %}
+
+{% block main %}
+
+    <form class="recipe" action="/edit/{{recipes[0]["id"]}}" method="post" enctype="multipart/form-data" runat="server">
+        <a class="edit-recipe" href="/cancel/{{recipes[0]["id"]}}">CANCEL</a>
+        <br>
+        <div class="mb-2">
+            <div>
+                <div class="image">
+                    <div class="bg-highlight">
+                      <div class="py-5 md:py-12 image-upload text-center">
+                        <div class="text-secondary">
+                          <img class="w-16 mx-auto pointer-events-none" src="http://assets-global.cpcdn.com/assets/camera-e526534167ed86f4891b97ae3da7bb6327b7679a0ad7c9b837434847f8457434.png">
+
+                          <p class="text-cookpad-20 font-extrabold mt-6">Upload recipe photo</p>
+
+                          <p class="text-cookpad-14">Inspire others to cook your dish</p>
+                        </div>
+
+                        <input type="file" name="file" onchange="readURL(this);" aria-label="Upload recipe photo" accept="image/*">
+                        <div class="row">
+                            <img id="blah" src="" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--fffffffffffffffffffffffffffffff -->
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="title" value="{{recipes[0]["title"]}}" placeholder="Title: Grandma's dumplings" type="text">
+        </div>
+
+        <div class="form-group">
+            <textarea autocomplete="off" class="form-control expanding" name="story" placeholder="Tell us about your recipe - who inspired it, why it's special, what makes it unique, who you cooked it for." type="text">{{recipes[0]["story"]}}</textarea>
+            <pre class="expanding-clone" style="margin: 0px; box-sizing: border-box; width: 100%; display: block; border: 1px solid; visibility: hidden; min-height: 54px; white-space: pre-wrap; line-height: 20px; text-decoration: none solid rgb(85, 85, 85); letter-spacing: 0px; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; text-transform: none; text-align: start; direction: ltr; word-spacing: 0px; overflow-wrap: break-word; word-break: normal; padding: 6px 12px; max-height: none;"><span></span><br></pre>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="fakes">Serves</label>
+            <input autocomplete="off" class="form-control fakes" value="{{recipes[0]["serving"]}}" name="serving" placeholder="2 People" type="text">
+        </div>
+
+        <div class="form-group row">
+            <label class="fakes">Cook time</label>
+            <input autocomplete="off" class="form-control fakes" value="{{recipes[0]["cook_time"]}}" name="cooking-time" placeholder="1hr 30 mins" type="text">
+        </div>
+
+        <h3 class="fork">Ingredients</h3>
+        <div class="form-group expanding-wrapper">
+            <textarea autocomplete="off" class="form-control expanding" data-paste-format="ul" name="ingredients" placeholder="-250g flour
+-100ml water" type="text">{{recipes[0]["ingredients"]}}</textarea>
+            <pre class="expanding-clone" style="margin: 0px; box-sizing: border-box; width: 100%; display: block; border: 1px solid; visibility: hidden; min-height: 54px; white-space: pre-wrap; line-height: 20px; text-decoration: none solid rgb(85, 85, 85); letter-spacing: 0px; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; text-transform: none; text-align: start; direction: ltr; word-spacing: 0px; overflow-wrap: break-word; word-break: normal; padding: 6px 12px; max-height: none;"><span></span><br></pre>
+        </div>
+
+        <h3 class="fork">Directions</h3>
+        <div class="form-group expanding-wrapper">
+            <textarea autocomplete="off"  class="form-control expanding" data-paste-format="ol" id="recipe_directions" name="steps" placeholder="Write it down as follows:
+1. Mix the flour and water until they thicken
+1. Cover the mixture and leave to sit at room temperature for 24 - 36 hours" type="text">{{recipes[0]["steps"]}}</textarea>
+            <pre class="expanding-clone" style="margin: 0px; box-sizing: border-box; width: 100%; display: block; border: 1px solid; visibility: hidden; min-height: 54px; white-space: pre-wrap; line-height: 20px; text-decoration: none solid rgb(85, 85, 85); letter-spacing: 0px; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; text-transform: none; text-align: start; direction: ltr; word-spacing: 0px; overflow-wrap: break-word; word-break: normal; padding: 6px 12px; max-height: none;"><span></span><br></pre>
+        </div>
+
+        <button class="btn btn-style" type="submit">Save</button>
+        <a class="delete-recipe" href="/delete_recipe/{{recipes[0]["id"]}}">DELETE</a>
+    </form>
+
+
+{% endblock %}
